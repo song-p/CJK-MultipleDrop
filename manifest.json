@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "CJK Multiple Drop",
+  "description": "This extension can drop multiple tasks in one short on CJK trac task list page.",
+  "version": "2.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://192.168.184.223/prm/integrated/doctask/list/*"],
+      "js": ["jquery-2.0.0.js", "multiple-drop.js"]
+    }
+  ]
+}
