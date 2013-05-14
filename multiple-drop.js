@@ -1,4 +1,4 @@
-$(function () {
+var start_plugin = function () {
     
     // Check whether a component is shared, which do not need migrate
     var sharedComponentTypes = ['TWAPanel', 'TWAToolBar'];
@@ -124,5 +124,14 @@ $(function () {
         $("#task_list > tbody > tr > td > input:checked").each(function(){
             $("td:nth-child(4) > select", $(this).parents("tr:first")).val('破棄');
         });
+    });
+};
+
+$(function() {
+    $("<input id='start_plugin_btn' type='submit' value='Start Multiple Drop Plugin'> style='background-color:blue'").insertBefore('#task_list_wrapper');
+    $("#start_plugin_btn").click(function(){
+        start_plugin();
+        $(this).hide();
+        return false;
     });
 });
